@@ -4,7 +4,7 @@ marks = {}
 
 def input_students():
     n = int(input("Enter number of students: "))
-    for _ in range(n):
+    for i in range(n):
         sid = input("Student id: ")
         name = input("Name: ")
         dob = input("Date of birth: ")
@@ -13,7 +13,7 @@ def input_students():
 
 def input_courses():
     n = int(input("Enter number of courses: "))
-    for _ in range(n):
+    for i in range(n):
         cid = input("Course id: ")
         name = input("Course name: ")
         courses.append({"id": cid, "name": name})
@@ -21,7 +21,7 @@ def input_courses():
 
 def input_marks():
     if not students or not courses:
-        print("You must enter students and courses first.")
+        print("Invalid")
         return
 
     print("\nAvailable courses:")
@@ -29,11 +29,6 @@ def input_marks():
         print(f"{c['id']} - {c['name']}")
 
     cid = input("Enter course id to input marks: ")
-
-    course_exists = any(c["id"] == cid for c in courses)
-    if not course_exists:
-        print("Course not found!")
-        return
 
     if cid not in marks:
         marks[cid] = {}
@@ -60,7 +55,7 @@ def show_marks():
     cid = input("Enter course id to view marks: ")
 
     if cid not in marks:
-        print("No marks recorded for this course.")
+        print("No mark")
         return
 
     print(f"\nMarks for course {cid}:")
