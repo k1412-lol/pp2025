@@ -1,0 +1,11 @@
+def menu():
+    print("\nMENU")
+    print("1. Input students")
+    print("2. Input courses")
+    print("3. Input marks")
+    print("4. Show students")
+    print("5. Show courses")
+    print("6. Show marks")
+    print("7. Show GPA list")
+    print("8. Sort by GPA")
+    print("0. Exit")
